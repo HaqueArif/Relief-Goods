@@ -30,7 +30,7 @@ const OurClient = () => {
 
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-x-2 place-items-center">
           {logos.map((logo, i) => (
-            <img key={i} src={logo} className="mb-10 sm:mb-24 " alt="" />
+            <img className="mb-10 sm:mb-24 " key={i} src={logo} alt="" />
           ))}
         </div>
       </div>
