@@ -1,7 +1,9 @@
 import EventItemsSection from "./EventItemsSection";
+import GallerySection from "./GallerySection";
 import HeroSection from "./HeroSection";
 import OurClient from "./OurClient";
 import OurServices from "./OurServices";
+import PricingPlanSection from "./PricingPlanSection";
 
 const Home = () => {
   return (
@@ -10,6 +12,8 @@ const Home = () => {
       <OurClient />
       <OurServices />
       <EventItemsSection />
+      <PricingPlanSection />
+      <GallerySection />
     </div>
   );
 };

@@ -16,48 +16,6 @@ const EventItemsSection = () => {
           ornare viverra. Ultrices faucibus neque velit risus ac id lorem.
         </p>
 
-        {/* <div className="grid grid-cols-12 grid-rows-2 gap-5">
-          <div className="col-span-12 md:col-span-6 lg:col-span-4  ">
-            <div className="grid grid-cols-12 gap-5">
-              <div className="col-span-12 glass-gradient-service p-5">
-                <img className="w-full" src={item1} alt="" />
-                <h4 className="mt-3 md:text-2xl font-[500]">Event Item - 1</h4>
-              </div>
-
-              <div className="col-span-12 sm:col-span-6  glass-gradient-service p-5">
-                <img className="w-full" src={item6} alt="event" />
-                <h4 className="mt-3 md:text-2xl font-[500] ">Event Item - 2</h4>
-              </div>
-              <div className="col-span-12 sm:col-span-6 glass-gradient-service p-5">
-                <img className="w-full" src={item2} alt="event" />
-                <h4 className="mt-3 md:text-2xl font-[500]">Event Item - 3</h4>
-              </div>
-            </div>
-          </div>
-          <div className="col-span-12 md:col-span-6 lg:col-span-4 ">
-            <div className="grid grid-cols-6 gap-5">
-              <div className="col-span-6 glass-gradient-service p-5 max-h-[275px]">
-                <img className="w-full max-h-[275px]" src={item4} alt="event" />
-                <h4 className="mt-3 md:text-2xl font-[500]">Event Item - 4</h4>
-              </div>
-
-              <div className="col-span-6 glass-gradient-service p-5">
-                <img
-                  className="w-full  max-h-[275px]"
-                  src={item5}
-                  alt="event"
-                />
-                <h4 className="mt-3 md:text-2xl font-[500]">Event Item - 5</h4>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-span-12 md:col-span-6 lg:col-span-4 glass-gradient-service p-5">
-            <img className="w-full" src={item3} alt="event" />
-            <h4 className="mt-3 md:text-2xl font-[500]">Event Item - 6</h4>
-          </div>
-        </div> */}
-
         <div className="grid grid-cols-12 gap-5 mb-40 text-center">
           <div className="w-full col-span-12 md:col-span-6 lg:col-span-4">
             <div className="grid grid-cols-2 gap-5">

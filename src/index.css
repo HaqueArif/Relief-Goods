@@ -102,6 +102,64 @@
   );
   backdrop-filter: blur(2px);
 }
+.hover-styles {
+  overflow: hidden;
+  position: relative;
+  transition: all;
+}
+.hover-styles:hover img {
+  position: absolute;
+  /* top: -150px; */
+  transform: translateY(-350px);
+  transition: all;
+}
+/* .hover-styles p{
+  pos
+} */
+.hover-styles:hover p {
+  display: block;
+  transition: all;
+}
+.hover-styles:hover Button {
+  display: block;
+  transition: all;
+}
+
+/* ============== pricing */
+.pricingBgColor {
+  position: relative;
+}
+.pricingBgColor::before {
+  content: "";
+  width: 450px;
+  height: 900px;
+  transform: rotate(40.337deg);
+  flex-shrink: 0;
+  border-radius: 1017.965px;
+  background: rgba(212, 95, 165, 0.25);
+
+  filter: blur(122px);
+  position: absolute;
+  top: -30%;
+  left: 100px;
+  z-index: -1;
+}
+
+.pricingBgColor::after {
+  content: "";
+  width: 749.947px;
+  height: 1017.965px;
+  transform: rotate(40.337deg);
+  flex-shrink: 0;
+  border-radius: 1017.965px;
+  background: rgba(95, 163, 212, 0.25);
+
+  filter: blur(122px);
+  position: absolute;
+  bottom: -60%;
+  right: 0;
+  z-index: -1;
+}
 
 @layer base {
   :root {
