@@ -4,6 +4,7 @@ import HeroSection from "./HeroSection";
 import OurClient from "./OurClient";
 import OurServices from "./OurServices";
 import PricingPlanSection from "./PricingPlanSection";
+import Testimonial from "./Testimonial/Testimonial";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <EventItemsSection />
       <PricingPlanSection />
       <GallerySection />
+      <Testimonial />
     </div>
   );
 };

@@ -159,6 +159,25 @@
   bottom: -60%;
   right: 0;
   z-index: -1;
+  /* color: rgba(0, 0, 0, 0.8); */
+}
+
+.slider-hover:hover {
+  @apply bg-primary text-white  rounded-full;
+}
+
+.mySwiper {
+  display: grid;
+  grid-auto-flow: column;
+  scroll-behavior: auto;
+  gap: 1.2rem;
+  overflow-y: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.mySwiper::-webkit-scrollbar {
+  display: none;
 }
 
 @layer base {
