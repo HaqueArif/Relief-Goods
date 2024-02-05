@@ -93,7 +93,7 @@ const Testimonial = () => {
 
   return (
     <Container className="pt-[94px] pb-[106px]">
-      <div className="flex flex-wrap justify-between mb-[79px]">
+      <div className="flex flex-wrap justify-between mb-10 jd:mb-[79px]">
         <h1 className="capitalize ">What Our Client Said about us</h1>
 
         <div className="">
