@@ -11,9 +11,8 @@ import Container from "@/components/Container";
 import client1 from "@/assets/Client/Ellipse 80.svg";
 import client2 from "@/assets/Client/Ellipse 80 (1).svg";
 import client3 from "@/assets/Client/Ellipse 80 (2).svg";
-import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useRef, useState } from "react";
-import Content from "./Content";
+import Content from "./TestimonialItem";
 import { NextButton, PrevButton } from "@/components/ui/TestimonialButtons";
 
 const testimonials = [

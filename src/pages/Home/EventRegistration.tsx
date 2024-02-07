@@ -5,7 +5,7 @@ import React from "react";
 
 const EventRegistration = () => {
   return (
-    <div className=" py-40 my-72 background-style ">
+    <div className=" py-40  ">
       <Container className="  ">
         <div className="grid md:grid-cols-2 gap-5  ">
           <div className="rounded-2xl px-8  border-2 py-10 glass-gradient">

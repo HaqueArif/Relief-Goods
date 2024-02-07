@@ -1,7 +1,18 @@
-import React from "react";
+type testimonialItemProps = {
+  image: string;
+  alt: string;
+  userName: string;
+  title: string;
+  testimonial: string;
+};
 
-const Content = (props) => {
-  const { image, alt, userName, title, testimonial } = props;
+const TestimonialItem: React.FC<testimonialItemProps> = ({
+  image,
+  alt,
+  userName,
+  title,
+  testimonial,
+}) => {
   return (
     <div>
       <div className="py-5 sm:py-10 ps-5 sm:ps-10 pr-5 sm:pr-[73px] rounded-[30px] bg-[#F8F9FF] hover:bg-primary hover:text-white text-[#000000cc]">
@@ -24,4 +35,4 @@ const Content = (props) => {
   );
 };
 
-export default Content;
+export default TestimonialItem;

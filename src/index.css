@@ -7,91 +7,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-.gradient-text {
-  background-clip: text;
-  color: transparent;
-  background-image: linear-gradient(
-    to right,
-    rgba(254, 137, 0, 1),
-    rgba(90, 1, 203, 1)
-  );
-}
-
-.outside {
-  position: relative;
-}
-.outside::before {
-  content: "";
-  display: block;
-  width: 120%;
-  height: 120%;
-  border-radius: 800px;
-  border: 2px solid black;
-  position: absolute;
-  top: -10%;
-  left: -10%;
-}
-
-.bg-style-top-right {
-  position: relative;
-}
-.bg-style-top-right::after {
-  content: "";
-  width: 718.112px;
-  height: 846.336px;
-  transform: rotate(27.417deg);
-  flex-shrink: 0;
-  display: block;
-  border-radius: 846.336px;
-  background: rgba(1, 229, 215, 0.2);
-  filter: blur(122px);
-  position: absolute;
-  top: -10%;
-  right: 0;
-  z-index: -1;
-}
-.bg-style-top-right {
-  position: relative;
-}
-.bg-style-top-right::before {
-  content: "";
-  width: 694.146px;
-  height: 694.146px;
-
-  transform: rotate(27.417deg);
-  flex-shrink: 0;
-  display: block;
-  border-radius: 694.146px;
-  background: rgba(209, 76, 242, 0.2);
-  filter: blur(122px);
-  position: absolute;
-  top: 0%;
-  left: 0;
-  z-index: -1;
-}
-
-.glass-gradient-service {
-  border-radius: 6px;
-
-  background: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 0.05) 93.85%,
-    rgba(0, 0, 0, 0.05) 93.85%
-  );
-  backdrop-filter: blur(2px);
-}
-
-.background-style {
-  width: 100%;
-  /* height: 100vh; Adjust the height as needed */
-  background-image: url("assets/mesh-gradient.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  /* Add more styles as needed */
-}
-
 .glass-gradient {
   border-radius: 32px;
   border: 2px solid #fff;
@@ -102,27 +17,14 @@
   );
   backdrop-filter: blur(2px);
 }
-.hover-styles {
-  overflow: hidden;
-  position: relative;
-  transition: all;
-}
-.hover-styles:hover img {
-  position: absolute;
-  /* top: -150px; */
-  transform: translateY(-350px);
-  transition: all;
-}
-/* .hover-styles p{
-  pos
-} */
-.hover-styles:hover p {
-  display: block;
-  transition: all;
-}
-.hover-styles:hover Button {
-  display: block;
-  transition: all;
+
+/* hero section */
+.background-style {
+  width: 100%;
+  background-image: url("assets/mesh-gradient.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* ============== pricing */

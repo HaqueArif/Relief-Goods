@@ -10,7 +10,7 @@ const EventLifecycle = () => {
         </h1>
         <div className="">
           <div className="">
-            <div className=" btn-glass-gradient hover:rotate-[360deg] duration-1000  relative w-[250px] h-[250px] sm:w-[400px] sm:h-[400px]  mx-auto  border-2 border-primary rounded-full ">
+            <div className=" btn-glass-gradient  duration-1000  relative w-[250px] h-[250px] sm:w-[400px] sm:h-[400px]  mx-auto  border-2 border-primary rounded-full ">
               <div className="absolute top-[50%] left-[50%] translate-x-[-50%]  translate-y-[-50%] w-[80%] text-center">
                 <h2 className="text-2xl font-bold mb-1">
                   Event <span className="text-primary">360</span>

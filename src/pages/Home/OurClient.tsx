@@ -27,7 +27,6 @@ const OurClient = () => {
     <Container>
       <div className="mt-[68px] mb-14">
         <h1 className="text-center mb-[84px]">Our Valuable Client</h1>
-
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-x-2 place-items-center">
           {logos.map((logo, i) => (
             <img className="mb-10 sm:mb-24 " key={i} src={logo} alt="" />
