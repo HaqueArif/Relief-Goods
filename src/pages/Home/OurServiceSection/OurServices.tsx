@@ -2,8 +2,9 @@ import service1 from "@/assets/Services/Rectangle 5 (1).png";
 import service2 from "@/assets/Services/Rectangle 5.png";
 import service3 from "@/assets/Services/Reactangle6.png";
 import Container from "@/components/Container";
-import "./OurServices.css";
+import "@/styles/OurServices.css";
 import ServiceCard from "@/components/ui/OurServiceSectionCard";
+import { motion } from "framer-motion";
 
 type ServiceData = {
   image: string;
@@ -11,6 +12,50 @@ type ServiceData = {
   description: string;
   features: string[];
 };
+
+const animateOurServiceDetails = {
+  initial: { opacity: 0, x: 200 },
+
+  whileInView: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 3, type: "spring", bounce: 0.5 },
+  },
+};
+const animateOurServiceHeader = {
+  initial: { opacity: 0, x: -200 },
+  whileInView: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 3, type: "spring", bounce: 0.5 },
+  },
+};
+const animationVariants = [
+  {
+    initial: { opacity: 0, x: -300 },
+    whileInView: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.5, type: "spring", stiffness: 100 },
+    },
+  },
+  {
+    initial: { opacity: 0, y: 100 },
+    whileInView: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, type: "spring", stiffness: 100 },
+    },
+  },
+  {
+    initial: { opacity: 0, x: 300 },
+    whileInView: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.5, type: "spring", stiffness: 100 },
+    },
+  },
+];
 
 const OurServices = () => {
   const services: ServiceData[] = [
@@ -54,19 +99,42 @@ const OurServices = () => {
       ],
     },
   ];
+
   return (
     <section className="service-section">
       <Container>
         <div className="header-section">
-          <h1 className="">Our Services</h1>
-          <p className="header-details">
+          <motion.h1
+            variants={animateOurServiceHeader}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true }}
+          >
+            Our Services
+          </motion.h1>
+          <motion.p
+            variants={animateOurServiceDetails}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true }}
+            className="header-details"
+          >
             Ut posuere felis arcu tellus tempus in in ultricies. Gravida id nibh
             ornare viverra. Ultrices faucibus neque velit risus ac id lorem.
-          </p>
+          </motion.p>
 
           <div className="service-divider">
             {services.map((service, index) => (
-              <ServiceCard key={index} {...service} />
+              <motion.div
+                key={index}
+                variants={animationVariants[index]}
+                initial="initial"
+                whileInView="whileInView"
+                viewport={{ once: true }}
+                className="service-card-style"
+              >
+                <ServiceCard key={index} {...service} />
+              </motion.div>
             ))}
           </div>
         </div>

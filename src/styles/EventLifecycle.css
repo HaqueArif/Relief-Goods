@@ -1,0 +1,78 @@
+.e-Cycle-parent {
+  @apply mt-36 mb-40  overflow-x-clip;
+}
+.bg-E-Cycle {
+  position: relative;
+}
+.bg-E-Cycle::before {
+  content: "";
+  width: 600px;
+  height: 600px;
+  transform: rotate(40.337deg);
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(212, 95, 165, 0.25);
+
+  filter: blur(122px);
+  position: absolute;
+  top: 0%;
+  right: 0px;
+  z-index: -1;
+}
+.bg-E-Cycle::after {
+  content: "";
+  width: 600px;
+  height: 600px;
+  transform: rotate(40.337deg);
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(95, 163, 212, 0.25);
+
+  filter: blur(122px);
+  position: absolute;
+  bottom: -50%;
+  left: 0px;
+  z-index: -1;
+}
+.e-Cycle-Heading {
+  @apply text-center md:w-[60%]  mx-auto mb-40;
+}
+.e-Cycle-Inner-Parent {
+  @apply duration-1000  relative w-[250px] h-[250px] sm:w-[400px] sm:h-[400px]  mx-auto  border-2 border-primary rounded-full;
+}
+.e-Cycle-Center-Contents {
+  @apply absolute top-[50%] left-[50%] translate-x-[-50%]  translate-y-[-50%] w-[80%] text-center;
+}
+.e-Cycle-Center-Heading-1 {
+  @apply text-2xl font-bold mb-1;
+}
+.e-Cycle-Center-Heading-2 {
+  @apply text-2xl sm:text-3xl font-bold;
+}
+.e-Cycle-Center-Paragraph {
+  @apply text-sm sm:text-base font-light w-[90%] mx-auto;
+}
+.e-Cycle-Arrow-1 {
+  @apply absolute top-[13%] left-[10%];
+}
+.e-Cycle-Arrow-2 {
+  @apply absolute bottom-[13%] left-[10%];
+}
+.e-Cycle-Arrow-3 {
+  @apply absolute bottom-[13%] right-[10%];
+}
+.e-Cycle-Arrow-4 {
+  @apply absolute top-[13%] right-[10%];
+}
+.e-Cycle-Btn-Top {
+  @apply rounded-full w-20 h-20 p-1 sm:w-36 sm:h-36 absolute top-0 left-[50%] translate-x-[-50%] translate-y-[-50%] bg-primary text-primary sm:text-lg text-white hover:bg-primary duration-100  hover:scale-105;
+}
+.e-Cycle-Btn-Right {
+  @apply rounded-full w-20 h-20 p-1 sm:w-36 sm:h-36 absolute top-[50%] right-0 translate-y-[-50%] translate-x-[50%] bg-primary  sm:text-lg text-white hover:bg-primary duration-100  hover:scale-105;
+}
+.e-Cycle-Btn-Bottom {
+  @apply rounded-full w-20 h-20 p-1 sm:w-36 sm:h-36 absolute bottom-0 left-[50%] translate-x-[-50%] translate-y-[50%] bg-primary text-primary sm:text-lg text-white hover:bg-primary duration-100  hover:scale-105;
+}
+.e-Cycle-Btn-Left {
+  @apply rounded-full w-20 h-20 p-1 sm:w-36 sm:h-36 absolute top-[50%] left-[0] translate-y-[-50%] translate-x-[-50%] bg-primary  sm:text-lg text-white hover:bg-primary duration-100  hover:scale-105  block;
+}

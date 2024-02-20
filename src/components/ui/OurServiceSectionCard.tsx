@@ -1,4 +1,3 @@
-import React from "react";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -16,7 +15,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   features,
 }) => {
   return (
-    <div className="service-card-style ">
+    <div className=" ">
       <div>
         <img src={image} alt="Event-Service-Image" />
       </div>

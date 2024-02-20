@@ -18,10 +18,7 @@
   @apply text-[#333] text-[16px] md:text-[20px] leading-[32px] my-8;
 }
 
-
-
-/* right section */
-
+/*/ /////////////////// right section//////////////////// */
 .right-section {
   @apply col-span-12 md:col-span-6;
 }
@@ -39,4 +36,15 @@
 }
 .outside::before {
   @apply content-[''] block w-[120%] h-[120%] border-2 border-black absolute top-[-10%] left-[-10%] rounded-[800px];
+}
+
+/*/ /////////////////// right section//////////////////// */
+.bottom-left-card-styles {
+  @apply bg-[rgba(104,95,212,0.35)] w-fit p-3 rounded-full mb-8;
+}
+.bottom-center-card-styles {
+  @apply bg-[rgba(242,201,76,0.35)] w-fit p-3 rounded-full mb-8;
+}
+.bottom-right-card-styles {
+  @apply bg-[rgba(138,178,220,0.35)] w-fit p-3 rounded-full mb-8;
 }

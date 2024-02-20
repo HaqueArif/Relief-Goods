@@ -1,0 +1,42 @@
+.pricing-card-divider {
+  @apply grid sm:grid-cols-2 lg:grid-cols-3 gap-5;
+}
+.pricing-card-parent {
+  @apply border rounded-[20px] border-gray-50 bg-white;
+}
+.pricing-lef-card-body {
+  @apply border-t-4 border-t-[#F249C8] p-8 rounded-[20px];
+}
+.pricing-header-divider {
+  @apply flex justify-between items-center;
+}
+.pricing-left-card-icon {
+  @apply bg-[#FEEDFA] p-5 rounded-lg;
+}
+.pricing-left-card-price {
+  @apply text-5xl font-[inter] text-[#F249C8] font-bold;
+}
+.pricing-card-heading {
+  @apply font-[inter] text-[#061C3D] text-2xl font-semibold mt-8 mb-2;
+}
+.pricing-card-heading-details {
+  @apply font-[inter] text-[#42526B];
+}
+.pricing-card-button {
+  @apply bg-white text-[#0B63E5] outline px-8 hover:text-white capitalize mt-8 mb-10;
+}
+.pricing-card-bottom-body {
+  @apply border-t p-8;
+}
+.pricing-card-list-style {
+  @apply flex items-start gap-[18px] list-none mb-5;
+}
+.pricing-card-checkIcon-bg {
+  @apply text-[#6FCF97] rounded-full  bg-[#E7F5E8] p-[5px];
+}
+.pricing-card-checkIcon {
+  @apply w-[14px] h-[14px];
+}
+.pricing-card-unavailable-feature {
+  @apply text-[#42526B] line-through;
+}

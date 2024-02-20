@@ -1,7 +1,16 @@
 import { NavLink } from "react-router-dom";
 import Container from "../Container";
+import { useState } from "react";
+import { MobileNavRoutes, WebNavRoutes } from "./NavRoutes";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
   return (
     <header className="h-fit fixed py-6  w-full z-[999]">
       <Container>
@@ -10,12 +19,31 @@ const Navbar = () => {
             <span className=" font-bold dark-gray">Event</span>
             <span className=" font-[900] text-primary">360</span>
           </NavLink>
-          <ul className="space-x-2 sm:space-x-8 font-[500] text-[14px] sm:text-[16px]">
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/">About</NavLink>
-            <NavLink to="/">Contact</NavLink>
-          </ul>
+          <div className="hidden sm:block">
+            <WebNavRoutes />
+          </div>
+          <div className="sm:hidden flex items-center">
+            {mobileMenuOpen ? (
+              <X
+                className="text-primary cursor-pointer"
+                size={32}
+                onClick={toggleMobileMenu}
+              />
+            ) : (
+              <Menu
+                className="text-primary cursor-pointer"
+                size={32}
+                onClick={toggleMobileMenu}
+              />
+            )}
+          </div>
         </nav>
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="sm:hidden flex justify-end">
+            <MobileNavRoutes />
+          </div>
+        )}
       </Container>
     </header>
   );

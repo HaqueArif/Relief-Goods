@@ -1,0 +1,31 @@
+.recent-E-Container {
+  @apply grid grid-cols-1 md:grid-cols-2  md:gap-10 xl:gap-[105px] place-items-center py-20 lg:py-[115px];
+}
+.recent-E-Divider {
+  @apply grid grid-cols-1 sm:grid-cols-3 gap-5 order-2 md:order-1;
+}
+.recent-E-Right-Contents {
+  @apply order-1 md:order-2 mb-10 md:mb-0;
+}
+.recent-E-Paragraph {
+  @apply mt-2 mb-4 lg:mt-6 lg:mb-12 w-[85%];
+}
+
+.recent-E-Parent {
+  position: relative;
+}
+.recent-E-Parent::before {
+  content: "";
+  width: 450px;
+  height: 900px;
+  transform: rotate(40.337deg);
+  flex-shrink: 0;
+  border-radius: 1017.965px;
+  background: rgba(212, 95, 165, 0.25);
+
+  filter: blur(122px);
+  position: absolute;
+  bottom: -30%;
+  left: 100px;
+  z-index: -1;
+}

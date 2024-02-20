@@ -27,7 +27,7 @@
 /* service card */
 
 .service-card-style {
-  @apply px-[25px] pt-[25px] pb-[30px] rounded-[6px] transition-all glass-gradient-service   hover-styles;
+  @apply px-[25px] pt-[25px] pb-[30px] rounded-[6px] transition-all glass-gradient-service hover-styles;
 }
 .service-card-style img {
   @apply w-full rounded-md  transition-all;
@@ -48,7 +48,7 @@
   @apply w-[10px] h-[10px];
 }
 .service-card-style Button {
-  @apply w-full py-4 absolute bottom-[-10%] transition-all;
+  @apply w-full py-4 absolute bottom-[-50%] transition-all;
 }
 
 .glass-gradient-service {
@@ -72,5 +72,5 @@
   transition: all;
 }
 .hover-styles:hover Button {
-  @apply bottom-5;
+  @apply bottom-[-50%];
 }

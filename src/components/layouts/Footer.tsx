@@ -1,5 +1,4 @@
 import { ArrowRight, Euro, Globe } from "lucide-react";
-import React from "react";
 import { NavLink } from "react-router-dom";
 import Container from "../Container";
 import "./Footer.css";
@@ -60,9 +59,11 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="text-white flex justify-between py-[37px]">
-            <p>@ 20023. All rights reserved</p>
-            <div className="flex justify-between gap-8">
+          <div className="text-white flex  flex-col-reverse sm:flex-row gap-5 justify-between py-[37px]">
+            <p className="text-center sm:text-start">
+              @ 20023. All rights reserved
+            </p>
+            <div className="flex flex-col sm:flex-row justify-between gap-8">
               <span>Terms</span>
               <span>Privacy</span>
               <span>Contact</span>

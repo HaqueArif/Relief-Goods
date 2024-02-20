@@ -1,23 +1,48 @@
+import {
+  intro,
+  introChildren,
+  introChildren2,
+  introChildren3,
+  introChildren4,
+} from "@/Animation/Hero.animation";
 import { Button } from "@/components/ui/button";
-import React from "react";
+import { motion } from "framer-motion";
 
 const LeftSection = () => {
   return (
     <div className="left-section">
-      <div>
+      <motion.div variants={intro} initial="hidden" animate="visible">
         <h1 className="uppercase">
-          <span>Brand New</span>
+          <motion.span variants={introChildren}>Brand New</motion.span>
           <br />
-          <span> event Packages</span>
+          <motion.span variants={introChildren}> event Packages</motion.span>
         </h1>
-        <h2 className="gradient-text">For Winter</h2>
-        <p className="hero-paragraph ">
+        <motion.h2
+          variants={introChildren2}
+          initial="initial"
+          animate="animate"
+          className="gradient-text"
+        >
+          For Winter
+        </motion.h2>
+        <motion.p
+          variants={introChildren3}
+          initial="initial"
+          animate="animate"
+          className="hero-paragraph "
+        >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus
           imperdiet sed id elementum. Quam vel aliquam sit vulputate. Faucibus
           nec gravida ipsum pulvinar vel non.
-        </p>
-        <Button>Explore</Button>
-      </div>
+        </motion.p>
+        <motion.div
+          variants={introChildren4}
+          initial="initial"
+          animate="animate"
+        >
+          <Button>Explore</Button>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };

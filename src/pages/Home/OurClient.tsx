@@ -9,8 +9,13 @@ import paypal from "@/assets/Company/paypal.svg";
 import amazon from "@/assets/Company/amazon.svg";
 import asana from "@/assets/Company/asana.svg";
 import Container from "@/components/Container";
+import { motion } from "framer-motion";
+import { fadeInLeft } from "@/Animation/useAnimation";
+import useScrollGrow from "@/hooks/ScrollGrowHook";
 
 const OurClient = () => {
+  const { style, componentRef } = useScrollGrow();
+
   const logos = [
     soptify,
     google,
@@ -23,15 +28,28 @@ const OurClient = () => {
     amazon,
     asana,
   ];
+
   return (
     <Container>
       <div className="mt-[68px] mb-14">
-        <h1 className="text-center mb-[84px]">Our Valuable Client</h1>
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-x-2 place-items-center">
+        <motion.h1
+          variants={fadeInLeft}
+          initial="initial"
+          whileInView="whileInView"
+          viewport={{ once: true }}
+          className="text-center mb-[84px]"
+        >
+          Our Valuable Client
+        </motion.h1>
+        <motion.div
+          ref={componentRef}
+          style={style}
+          className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-x-2 place-items-center"
+        >
           {logos.map((logo, i) => (
             <img className="mb-10 sm:mb-24 " key={i} src={logo} alt="" />
           ))}
-        </div>
+        </motion.div>
       </div>
     </Container>
   );

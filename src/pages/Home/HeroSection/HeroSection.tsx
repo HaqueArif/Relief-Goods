@@ -1,6 +1,6 @@
 import Container from "@/components/Container";
 
-import "./Hero.css";
+import "@/styles/Hero.css";
 import LeftSection from "./LeftSection";
 import RightSection from "./RightSection";
 import BottomSection from "./BottomSection";

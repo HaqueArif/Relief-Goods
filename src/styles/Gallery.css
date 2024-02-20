@@ -1,0 +1,18 @@
+.gallery-measurement {
+  @apply mt-[188px] mb-[38px];
+}
+.gallery-section-divider {
+  @apply grid md:grid-cols-2 gap-[120px] place-items-center;
+}
+.gallery-details-p {
+  @apply my-8;
+}
+.gallery-details-list-style {
+  @apply flex items-start gap-[18px] list-none mb-4;
+}
+.gallery-details-span {
+  @apply text-[#6FCF97] rounded-full  bg-[#E7F5E8] p-[5px];
+}
+.gallery-details-checkIcon {
+  @apply w-[14px] h-[14px];
+}

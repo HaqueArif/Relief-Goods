@@ -1,91 +1,39 @@
-import { Swiper, SwiperSlide } from "swiper/react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
+import { Swiper as SwiperType } from "swiper";
 import { Navigation, Pagination } from "swiper/modules";
-
-// Import Swiper styles
+import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
 import "./Testimonial.css";
 import Container from "@/components/Container";
-import client1 from "@/assets/Client/Ellipse 80.svg";
-import client2 from "@/assets/Client/Ellipse 80 (1).svg";
-import client3 from "@/assets/Client/Ellipse 80 (2).svg";
 import { useRef, useState } from "react";
 import Content from "./TestimonialItem";
 import { NextButton, PrevButton } from "@/components/ui/TestimonialButtons";
-
-const testimonials = [
-  {
-    id: 1,
-    userName: "Amelia Joseph",
-    title: "Chief Manager",
-    testimonial:
-      "My vision came alive effortlessly. Their blend of casual and professional approach made the process a breeze. Creativity flowed, and the results were beyond my expectations.",
-    image: client1,
-  },
-  {
-    id: 2,
-    userName: "Jacob Joshua",
-    title: "Chief Manager",
-    testimonial:
-      "I found the digital expertise I needed. Their creative-professional balance exceeded expectations. Friendly interactions, exceptional outcomes. For digital enchantment, it's got to be Embrace!",
-    image: client2,
-  },
-  {
-    id: 3,
-    userName: "Amelia Joseph2",
-    title: "Chief Manager",
-    testimonial:
-      "Embrace really nails it! Creative brilliance, approachable style. They're the partners you want—artistry meets strategy. Thrilled with what they achieved!",
-    image: client3,
-  },
-  {
-    id: 4,
-    userName: "Amelia Joseph",
-    title: "Chief Manager",
-    testimonial:
-      "My vision came alive effortlessly. Their blend of casual and professional approach made the process a breeze. Creativity flowed, and the results were beyond my expectations.",
-    image: client1,
-  },
-  {
-    id: 5,
-    userName: "Jacob Joshua",
-    title: "Chief Manager",
-    testimonial:
-      "I found the digital expertise I needed. Their creative-professional balance exceeded expectations. Friendly interactions, exceptional outcomes. For digital enchantment, it's got to be Embrace!",
-    image: client2,
-  },
-  {
-    id: 6,
-    userName: "Amelia Joseph",
-    title: "Chief Manager",
-    testimonial:
-      "Embrace really nails it! Creative brilliance, approachable style. They're the partners you want—artistry meets strategy. Thrilled with what they achieved!",
-    image: client3,
-  },
-];
+import { fadeInLeft, fadeInRight, flipLeft } from "@/Animation/useAnimation";
+import { testimonials } from "@/data/Testimonial.Data";
 
 const Testimonial = () => {
   const [slideBegOrNot, handleSlideByState] = useState({
     isFirst: true,
     isLast: false,
   });
-  const SlideRef = useRef();
+  const SlideRef = useRef<SwiperRef | null>(null);
+
+  const onSlideChange = (swiper: SwiperType) => {
+    handleSlideByState({
+      isFirst: swiper.isBeginning,
+      isLast: swiper.isBeginning,
+    });
+  };
 
   const handleNext = () => {
-    SlideRef.current.swiper.slideNext();
+    SlideRef.current!.swiper.slideNext();
   };
 
   const handlePrev = () => {
-    SlideRef.current.swiper.slidePrev();
-  };
-
-  const onSlideChange = (swiper) => {
-    handleSlideByState({
-      isFirst: swiper.isBeginning,
-      isLast: swiper.isEnd,
-    });
+    SlideRef.current!.swiper.slidePrev();
   };
 
   const { isLast, isFirst } = slideBegOrNot;
@@ -93,62 +41,84 @@ const Testimonial = () => {
   return (
     <Container className="pt-[94px] pb-[106px]">
       <div className="flex flex-wrap justify-between mb-10 jd:mb-[79px]">
-        <h1 className="capitalize ">What Our Client Said about us</h1>
+        <motion.h1
+          variants={fadeInLeft}
+          initial="initial"
+          whileInView="whileInView"
+          viewport={{ once: true }}
+          className="capitalize "
+        >
+          What Our Client Said about us
+        </motion.h1>
 
-        <div className="">
+        {/*/////////// Navigation ///////////*/}
+        <motion.div
+          variants={fadeInRight}
+          initial="initial"
+          whileInView="whileInView"
+          viewport={{ once: true }}
+        >
           <PrevButton onClick={handlePrev} isDisabled={isFirst} />
           <NextButton onClick={handleNext} isDisabled={isLast} />
-        </div>
+        </motion.div>
       </div>
-
-      <Swiper
-        slidesPerView={1}
-        spaceBetween={20}
-        className={"mySwiper"}
-        ref={SlideRef}
-        onSlideChange={onSlideChange}
-        pagination={{
-          el: ".swiper-paginations",
-          type: "fraction",
-        }}
-        navigation={false}
-        modules={[Pagination, Navigation]}
-        breakpoints={{
-          0: {
-            slidesPerView: 1,
-          },
-          390: {
-            slidesPerView: 1,
-          },
-          502: {
-            slidesPerView: 1,
-          },
-          802: {
-            slidesPerView: 2,
-          },
-          992: {
-            slidesPerView: 2,
-          },
-          1200: {
-            slidesPerView: 2.5,
-          },
-        }}
+      {/*/////////// Slider ///////////*/}
+      <motion.div
+        variants={flipLeft}
+        initial="initial"
+        whileInView="whileInView"
+        viewport={{ once: true }}
       >
-        {testimonials.map((item) => {
-          return (
-            <SwiperSlide key={item.id}>
-              <Content
-                key={item.id}
-                userName={item.userName}
-                image={item.image}
-                title={item.title}
-                testimonial={item.testimonial}
-                alt={item.userName}
-              />
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={20}
+          className={"mySwiper"}
+          ref={SlideRef}
+          onSlideChange={onSlideChange}
+          pagination={{
+            el: ".swiper-paginations",
+            type: "fraction",
+          }}
+          navigation={false}
+          modules={[Pagination, Navigation]}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            390: {
+              slidesPerView: 1,
+            },
+            502: {
+              slidesPerView: 1,
+            },
+            802: {
+              slidesPerView: 2,
+            },
+            992: {
+              slidesPerView: 2,
+            },
+            1200: {
+              slidesPerView: 2.5,
+            },
+          }}
+        >
+          {/*/////////// Slider Components ///////////*/}
+          {testimonials.map((item) => {
+            return (
+              <SwiperSlide key={item.id}>
+                <Content
+                  key={item.id}
+                  userName={item.userName}
+                  image={item.image}
+                  title={item.title}
+                  testimonial={item.testimonial}
+                  alt={item.userName}
+                />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </motion.div>
     </Container>
   );
 };

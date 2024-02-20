@@ -1,0 +1,43 @@
+/* left side content */
+.registration-gradient-text {
+  @apply bg-gradient-to-r from-orange-500 to-indigo-700 text-transparent leading-[110%] inline-block text-4xl  font-extrabold  mt-2 bg-clip-text;
+}
+.e-Reg-Divider {
+  @apply grid md:grid-cols-2 gap-5;
+}
+.e-Reg-Left-Content {
+  @apply rounded-2xl px-8  border-2 py-10;
+}
+.e-Reg-Header {
+  @apply text-4xl font-semibold;
+}
+.e-Reg-Bottom-Heading-positioning {
+  @apply flex items-center;
+}
+.e-Reg-Bottom-Heading-typography {
+  @apply font-bold text-lg;
+}
+
+/* right side content */
+
+.e-Reg-Right-Content {
+  @apply text-white bg-gradient-to-tr from-orange-500 to-indigo-700  rounded-2xl;
+}
+.e-Reg-Right-Content-Measurement {
+  @apply px-8 py-10;
+}
+.e-Reg-Right-Content-Heading {
+  @apply text-2xl font-semibold mb-5;
+}
+.e-Reg-Input {
+  @apply w-full h-10 rounded-sm;
+}
+.e-Reg-Form-divider {
+  @apply flex flex-col gap-5;
+}
+.e-Reg-input-divider {
+  @apply grid sm:grid-cols-2 gap-5;
+}
+.e-Reg-form-bottom-Contents {
+  @apply flex items-start gap-2 mt-5;
+}
