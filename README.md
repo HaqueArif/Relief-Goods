@@ -1,96 +1,111 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event 360 Management Website</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            margin: 20px;
-        }
 
-        h1, h2, h3 {
-            color: #004080;
-        }
+# Event 360 
+An Event Management Website
 
-        code {
-            background-color: #f4f4f4;
-            padding: 2px 4px;
-            border: 1px solid #ddd;
-        }
 
-        pre {
-            background-color: #f4f4f4;
-            padding: 10px;
-            border: 1px solid #ddd;
-            overflow-x: auto;
-        }
+Welcome to the Event 360 Management website! This platform allows you to efficiently manage and organize your events seamlessly. 
 
-        a {
-            color: #0066cc;
-        }
 
-        section {
-            margin-bottom: 20px;
-        }
 
-        h2 {
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 5px;
-            margin-bottom: 10px;
-        }
-    </style>
-</head>
+## Features
 
-<body>
+### Dashboard
 
-    <header>
-        <h1>Event 360 Management Website</h1>
-    </header>
+ The dashboard provides a user-friendly interface with a beautiful sidebar, enhanced by caching for a smooth user experience. The deshboard is maintained with recent events and event items logically organized into separate sections for clarity.
 
-    <section>
-        <h2>Overview</h2>
-        <p>Welcome to the Event 360 Management website! This platform allows you to efficiently manage and organize your
-            events seamlessly.</p>
-    </section>
 
-    <section>
-        <h2>Getting Started</h2>
-        <h3>Cloning the Repository</h3>
-        <p>To get started, clone the GitHub repository to your local machine. Open your terminal and run the following
-            command:</p>
-        <pre><code>git clone https://github.com/your-username/your-repository.git</code></pre>
-        <p>Replace <code>your-username</code> and <code>your-repository</code> with your GitHub username and the name
-            of your repository.</p>
-        <h3>Initializing Git and Running Locally</h3>
-        <p>Navigate to the project directory using the terminal:</p>
-        <pre><code>cd your-repository</code></pre>
-        <p>Next, initialize Git:</p>
-        <pre><code>git init</code></pre>
-        <p>Install the project dependencies:</p>
-        <pre><code>npm install</code></pre>
-        <p>Now, you can run the project locally:</p>
-        <pre><code>npm start</code></pre>
-        <p>Visit <a href="http://localhost:3000">http://localhost:3000</a> in your web browser to access the local version
-            of the website.</p>
-    </section>
+#### Recent Events
+- Recent Events Efficiently handle recent event with dedicated sections for see the recent events and also, creation, deletion, and updating. This ensures streamlined management and organization.
+#### Event Items
+- Event Items Efficiently handle event items with dedicated sections for see the event items and also  creation, deletion, and updating. This ensures streamlined management and organization.
 
-    <!-- Add other sections as needed -->
 
-    <footer>
-        <section>
-            <h2>Conclusion</h2>
-            <p>Thank you for exploring our Event 360 Management website. We hope this platform enhances your event
-                management experience. If you encounter any issues or have suggestions, feel free to contribute or reach
-                out to us.</p>
-            <p>Happy event organizing! 🎉</p>
-        </section>
-    </footer>
+## Technologies 
 
-</body>
+### Client-site
+- TypeScript, 
+- JavaScript
+- Tailwind CSS
+- Axios 
+- Tanstack Query
+- Lucide-react
+- React Vite 
 
-</html>
+### Server-site
+- Node.js,
+- Express.js 
+- Cors
+- MongoDB,
+- Vercel,
+
+ The dashboard provides a user-friendly interface with a beautiful sidebar, enhanced by caching for a smooth user experience. The deshboard is maintained with recent events and event items logically organized into separate sections for clarity.
+
+
+#### Recent Events
+- Recent Events Efficiently handle recent event with dedicated sections for see the recent events and also, creation, deletion, and updating. This ensures streamlined management and organization.
+#### Event Items
+- Event Items Efficiently handle event items with dedicated sections for see the event items and also  creation, deletion, and updating. This ensures streamlined management and organization.
+
+## How to run client-site locally?
+
+To get started, clone the GitHub repository to your local machine. Open your terminal and run the following command:
+
+```bash
+  git clone https://github.com/programming-hero-web-course1/l2-b2-assignment-5-frontend-HaqueArif.git
+```
+
+
+Navigate to the project directory using the terminal:
+
+```bash
+  cd your-repository
+```
+Next, initialize Git:
+
+```bash
+ git init
+```
+Now, you can run the project locally:
+
+```bash
+ npm run dev
+```
+Visit http://localhost:5173/ in your web browser to access the local version of the website.
+
+## How to run server-site locally?
+
+To get started, clone the GitHub repository to your local machine. Open your terminal and run the following command:
+
+```bash
+  git clone https://github.com/programming-hero-web-course1/l2-b2-assignment-5-frontend-HaqueArif.git
+```
+
+
+Navigate to the project directory using the terminal:
+
+```bash
+  cd your-repository
+```
+Next, initialize Git:
+
+```bash
+ git init
+```
+Now, you can run the project locally:
+
+```bash
+ nodemon index.js
+```
+Further need, Install mongodb, node, cors, exprees.js
+Visit http://localhost:5000/ in your web browser to access the local version of the website.
+
+
+## Event 360 live link:
+- Client-site: https://event-360-server-ten.vercel.app/
+
+- Server-site: https://event360-51e7e.web.app/
+###
+Thank you for exploring my Event 360 Management website. I hope this website touch you. If you encounter any issues or have suggestions, feel free to contribute or reach out to me.
+
+Happy event organizing! 🎉
