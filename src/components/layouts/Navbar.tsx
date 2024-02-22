@@ -15,13 +15,17 @@ const Navbar = () => {
     <header className="h-fit fixed py-6  w-full z-[999]">
       <Container>
         <nav className="w-full h-full backdrop-blur-sm max-w-[1240px] flex justify-between items-center ">
+          {/* logo section */}
           <NavLink to="/" className="space-x-2 text-[24px] sm:text-[32px]">
             <span className=" font-bold dark-gray">Event</span>
             <span className=" font-[900] text-primary">360</span>
           </NavLink>
+          {/* web routes */}
           <div className="hidden sm:block">
             <WebNavRoutes />
           </div>
+
+          {/* Mobile Menu */}
           <div className="sm:hidden flex items-center">
             {mobileMenuOpen ? (
               <X
@@ -38,7 +42,7 @@ const Navbar = () => {
             )}
           </div>
         </nav>
-        {/* Mobile Menu */}
+        {/* web routes */}
         {mobileMenuOpen && (
           <div className="sm:hidden flex justify-end">
             <MobileNavRoutes />

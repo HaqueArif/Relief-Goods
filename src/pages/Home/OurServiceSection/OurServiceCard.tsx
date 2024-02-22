@@ -1,24 +1,20 @@
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ServiceCardProps } from "../../../components/Types";
 
-type ServiceCardProps = {
-  image: string;
-  title: string;
-  description: string;
-  features: string[];
-};
-
-const ServiceCard: React.FC<ServiceCardProps> = ({
+const ServiceCard = ({
   image,
   title,
   description,
   features,
-}) => {
+}: ServiceCardProps) => {
   return (
-    <div className=" ">
+    <div>
+      {/* Thumbnail */}
       <div>
         <img src={image} alt="Event-Service-Image" />
       </div>
+      {/* body */}
       <div className=" relative h-full">
         <h3>{title}</h3>
         <p>{description}</p>

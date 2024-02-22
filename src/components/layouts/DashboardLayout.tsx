@@ -16,13 +16,7 @@ const DashboardLayout = () => {
         sidebarOpen={sidebarOpen}
         toggleSidebar={toggleSidebar}
       />
-      <div
-        className="overflow-x-auto "
-        style={{
-          marginLeft: sidebarOpen ? "0px" : "10px",
-          transition: "margin-left 0.3s ease-in-out",
-        }}
-      >
+      <div className="overflow-x-auto ps-2 sm:ps-0">
         <Outlet />
       </div>
     </div>

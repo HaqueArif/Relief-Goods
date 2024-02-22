@@ -1,6 +1,5 @@
 export const fadeInRight = {
   initial: { opacity: 0, x: 200 },
-
   whileInView: {
     opacity: 1,
     x: 0,
@@ -60,6 +59,18 @@ export const flipLeft = {
     },
   },
 };
+export const flip = {
+  initial: { opacity: 0.5, rotateY: -190 },
+  whileInView: {
+    opacity: 1,
+    rotateY: 0,
+    transition: {
+      duration: 5,
+      type: "spring",
+      bounce: 0.5,
+    },
+  },
+};
 
 export const rotateLeft = {
   initial: { opacity: 0, rotate: -45 },
@@ -78,6 +89,7 @@ export const rotateRight = {
   },
 };
 
+// Our service section
 export const animationVariants = [
   {
     initial: { opacity: 0, x: -300 },
@@ -104,3 +116,5 @@ export const animationVariants = [
     },
   },
 ];
+
+//

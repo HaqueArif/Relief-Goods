@@ -25,8 +25,10 @@ const EventItems = () => {
 
   return (
     <div className="py-10">
-      <div className="max-w-4xl mx-auto glass-gradient p-20 rounded-lg">
-        <h3 className="text-4xl text-center font-extrabold">Event Items</h3>
+      <div className="max-w-4xl mx-auto glass-gradient p-2 sm:p-20 rounded-lg">
+        <h3 className="text-4xl text-center font-extrabold mb-5">
+          Event Items
+        </h3>
         <div className="flex items-center justify-between">
           <h4 className=" text-xl font-extrabold">
             Total Item <span className="text-primary">{data?.data.length}</span>

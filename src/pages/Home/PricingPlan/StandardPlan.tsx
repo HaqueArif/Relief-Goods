@@ -4,7 +4,7 @@ import { TImageProps } from "@/components/Types";
 import { rotateLeft } from "@/Animation/useAnimation";
 import { motion } from "framer-motion";
 
-const StandardPlan = (props: TImageProps): JSX.Element => {
+const StandardPlan = (props: TImageProps) => {
   return (
     <motion.div
       variants={rotateLeft}

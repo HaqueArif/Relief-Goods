@@ -6,11 +6,13 @@ import { motion } from "framer-motion";
 const Frame = (props: TGalleryFrameProps): JSX.Element => {
   return (
     <div className="relative">
+      {/* background star icon */}
       <img
         className="absolute w-28 sm:w-48 sm:-top-  md:w-36 lg:w-44 -top-16 md:-top-14 -left-2 -z-10"
         src={props.star}
         alt=""
       />
+
       <motion.div
         variants={intro}
         initial="hidden"
@@ -18,6 +20,7 @@ const Frame = (props: TGalleryFrameProps): JSX.Element => {
         viewport={{ once: true }}
         className="grid grid-cols-4 place-items-center"
       >
+        {/* left two */}
         <motion.div
           variants={flipRight}
           initial="initial"
@@ -27,6 +30,7 @@ const Frame = (props: TGalleryFrameProps): JSX.Element => {
           <img src={props.img1} alt="Gallery" />
           <img src={props.img2} alt="Gallery" />
         </motion.div>
+        {/* middle left three*/}
         <motion.div
           variants={flipLeft}
           initial="initial"
@@ -37,6 +41,7 @@ const Frame = (props: TGalleryFrameProps): JSX.Element => {
           <img src={props.img4} alt="Gallery" />
           <img src={props.img5} alt="Gallery" />
         </motion.div>
+        {/* middle right three*/}
         <motion.div
           variants={flipRight}
           initial="initial"
@@ -47,6 +52,7 @@ const Frame = (props: TGalleryFrameProps): JSX.Element => {
           <img src={props.img7} alt="Gallery" />
           <img src={props.img8} alt="Gallery" />
         </motion.div>
+        {/* last two*/}
         <motion.div
           variants={flipLeft}
           initial="initial"

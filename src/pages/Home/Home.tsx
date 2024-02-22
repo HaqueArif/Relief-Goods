@@ -3,7 +3,7 @@ import EventLifecycle from "./EventLifecycle/EventLifecycle";
 import EventRegistration from "./EventRegistration/EventRegistration";
 import GallerySection from "./Gallery/GallerySection";
 import HeroSection from "./HeroSection/HeroSection";
-import OurClient from "./OurClient";
+import OurClient from "./OurClient/OurClient";
 import OurServices from "./OurServiceSection/OurServices";
 import PricingPlanSection from "./PricingPlan/PricingPlanSection";
 import RecentEvents from "./RecentEvents/RecentEvents";

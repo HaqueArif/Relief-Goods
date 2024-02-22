@@ -19,8 +19,11 @@ const GallerySection = () => {
   return (
     <Container className="gallery-measurement">
       <div className="gallery-section-divider">
+        {/* Headings and details */}
+        {/* left section */}
         <GalleryDetails />
-
+        {/* Thumbnail or images */}
+        {/* right section */}
         <Frame
           star={star}
           img1={img1}

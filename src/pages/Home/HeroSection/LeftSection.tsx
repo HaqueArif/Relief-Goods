@@ -40,7 +40,7 @@ const LeftSection = () => {
           initial="initial"
           animate="animate"
         >
-          <Button>Explore</Button>
+          <Button className="py-4 px-16 text-base font-bold">Explore</Button>
         </motion.div>
       </motion.div>
     </div>

@@ -12,13 +12,17 @@ const RecentEvents = () => {
   if (isError) {
     return <p>Something went wrong...</p>;
   }
-  const recentEvents = data?.data.slice(0, 6);
+
+  // getting the first six index data
+  const firstSixIndex = data?.data.slice(0, 6);
+  const recentEvents = firstSixIndex;
 
   return (
     <div className="recent-E-Parent">
       <Container className="recent-E-Container">
+        {/* left section || thumbnails */}
         <RecentEventsGallery recentEvents={recentEvents} />
-
+        {/* Headings and details */}
         <RecentEventsDetails />
       </Container>
     </div>

@@ -33,7 +33,7 @@
   @apply w-full rounded-md  transition-all;
 }
 .service-card-style h3 {
-  @apply text-[32px] font-extrabold leading-[110%] mt-6 mb-3;
+  @apply text-2xl xl:text-[32px] font-extrabold leading-[110%] mt-6 mb-3;
 }
 .service-card-style p {
   @apply text-start text-[#566B84] mb-[33px] hidden transition-all;

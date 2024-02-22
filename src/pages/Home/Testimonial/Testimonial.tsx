@@ -12,7 +12,7 @@ import { useRef, useState } from "react";
 import Content from "./TestimonialItem";
 import { NextButton, PrevButton } from "@/components/ui/TestimonialButtons";
 import { fadeInLeft, fadeInRight, flipLeft } from "@/Animation/useAnimation";
-import { testimonials } from "@/data/Testimonial.Data";
+import { testimonials } from "@/data/testimonial.data";
 
 const Testimonial = () => {
   const [slideBegOrNot, handleSlideByState] = useState({

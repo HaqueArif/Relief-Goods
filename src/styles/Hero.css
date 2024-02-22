@@ -2,8 +2,8 @@
   @apply min-h-screen pt-36;
 } */
 
-.hero-section-divide {
-  @apply grid grid-cols-12 place-items-center align-middle gap-y-20 lg:gap-y-0;
+.hero-section-divider {
+  @apply grid grid-cols-12 place-items-center align-middle gap-y-20 lg:gap-y-10 xl:gap-y-0;
 }
 
 /*//////////////////// Left Section//////////////////// */

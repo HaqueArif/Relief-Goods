@@ -11,9 +11,10 @@ import BusinessPlan from "./BusinessPlan";
 
 const PricingPlanSection = () => {
   return (
-    <section className="pricingBgColor overflow-x-clip">
+    <div className="pricingBgColor overflow-x-clip">
       <Container>
         <div>
+          {/*  heading */}
           <motion.h1
             variants={fadeInLeft}
             initial="initial"
@@ -35,7 +36,7 @@ const PricingPlanSection = () => {
             posuere felis arcu tellus tempus in in ultricies. Gravida id nibh
             ornare viverra. Ultrices faucibus neque velit risus ac id lorem.
           </motion.p>
-
+          {/* Pricing Card's */}
           <div className="pricing-card-divider">
             <StandardPlan thumbnail={standard} />
             <PremiumPlan thumbnail={premium} />
@@ -43,7 +44,7 @@ const PricingPlanSection = () => {
           </div>
         </div>
       </Container>
-    </section>
+    </div>
   );
 };
 

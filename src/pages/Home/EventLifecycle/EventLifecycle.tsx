@@ -15,6 +15,7 @@ const EventLifecycle = () => {
   return (
     <div className="e-Cycle-parent bg-E-Cycle">
       <Container>
+        {/* heading */}
         <motion.h1
           variants={fadeInLeft}
           initial="initial"
@@ -24,6 +25,7 @@ const EventLifecycle = () => {
         >
           Event Planning And Marketing In One Place
         </motion.h1>
+        {/* body section */}
         <motion.div>
           <motion.div
             variants={fadeInBounce}

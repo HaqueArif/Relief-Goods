@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import { rotateRight } from "@/Animation/useAnimation";
-const BusinessPlan = (props: TImageProps): JSX.Element => {
+const BusinessPlan = (props: TImageProps) => {
   return (
     <motion.div
       variants={rotateRight}

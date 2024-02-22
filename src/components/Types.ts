@@ -1,3 +1,20 @@
+import { FormEvent } from "react";
+
+// ourService section
+export type ServiceData = {
+  image: string;
+  title: string;
+  description: string;
+  features: string[];
+};
+
+export type ServiceCardProps = {
+  image: string;
+  title: string;
+  description: string;
+  features: string[];
+};
+
 export type TEventItem = {
   _id: string;
   item: string;
@@ -71,4 +88,19 @@ export type NavlinkProps = {
 export type EventProps = {
   _id: string;
   item: string;
+};
+
+// form
+
+export type EventFormProps = {
+  onSubmit: (event: FormEvent<HTMLFormElement>) => void;
+  onInputChange: React.ChangeEventHandler<HTMLInputElement>;
+  label: string;
+};
+
+// dashboard sidebar
+
+export type SidebarComponentProps = {
+  sidebarOpen: boolean;
+  toggleSidebar: () => void;
 };

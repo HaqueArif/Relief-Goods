@@ -22,11 +22,12 @@ const EventItemsSection = () => {
   if (isError) {
     return <p>Something went wrong...</p>;
   }
-
+  // getting the first six index data
   const firstSixItemsWithIndex = data?.data
     ?.slice(0, 6)
     .map((item: EventProps, index: number) => ({ ...item, index }));
 
+  // destructuring and adding the serial number at the end of the name
   const destructuredData: DestructuredData = firstSixItemsWithIndex.reduce(
     (acc: DestructuredData, curr: { item: string }, index: number) => {
       acc[`item${index + 1}` as keyof DestructuredData] = curr.item;
@@ -39,6 +40,7 @@ const EventItemsSection = () => {
   return (
     <section className="measurement">
       <Container>
+        {/* heading */}
         <motion.h1
           variants={fadeInRight}
           initial="initial"
@@ -58,6 +60,7 @@ const EventItemsSection = () => {
           Ut posuere felis arcu tellus tempus in in ultricies. Gravida id nibh
           ornare viverra. Ultrices faucibus neque velit risus ac id lorem.
         </motion.p>
+        {/* Thumbnail or images */}
         <div className="items-divider">
           <EventItem01 thumbnail={destructuredData?.item1} />
           <EventItem02 thumbnail={destructuredData?.item2} />

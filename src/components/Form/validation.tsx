@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 export const formSchema = z.object({
-  photoUrl: z.string().refine((data) => data.trim() !== "", {
+  item: z.string().refine((data) => data.trim() !== "", {
     message: "PhotoUrl  is required",
   }),
 });

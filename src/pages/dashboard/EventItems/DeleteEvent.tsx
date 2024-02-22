@@ -2,7 +2,7 @@ import { IdProps } from "@/components/Types";
 import useDeleteHandler from "@/components/eventItemsHandler/useDeleteHandler";
 import { Trash2 } from "lucide-react";
 
-const DeleteEvent = ({ itemId }: IdProps): JSX.Element => {
+const DeleteEvent = ({ itemId }: IdProps) => {
   const handleDelete = useDeleteHandler();
   return (
     <button

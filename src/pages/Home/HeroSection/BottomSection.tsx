@@ -2,7 +2,7 @@ import {
   BottomSectionCenterCard,
   BottomSectionLeftCard,
   BottomSectionRightCard,
-} from "@/components/ui/BottomSectionCard";
+} from "@/pages/Home/HeroSection/BottomSectionCard";
 
 const BottomSection = () => {
   return (

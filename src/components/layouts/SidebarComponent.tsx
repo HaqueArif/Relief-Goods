@@ -2,23 +2,19 @@
 
 import { ChevronRight } from "lucide-react";
 import Sidebar from "./Sidebar";
+import { SidebarComponentProps } from "../Types";
 
-type SidebarComponentProps = {
-  sidebarOpen: boolean;
-  toggleSidebar: () => void;
-};
-
-const SidebarComponent: React.FC<SidebarComponentProps> = ({
+const SidebarComponent = ({
   sidebarOpen,
   toggleSidebar,
-}) => {
+}: SidebarComponentProps) => {
   return (
     <div
       className="glass-gradient"
       style={{
         position: "fixed",
         top: "0",
-        left: sidebarOpen ? "0" : "-230px",
+        left: sidebarOpen ? "0" : "-240px",
         height: "100%",
         width: "250px",
         transition: "left 0.1s ease-in-out",

@@ -1,5 +1,4 @@
 import Container from "@/components/Container";
-
 import "@/styles/Hero.css";
 import LeftSection from "./LeftSection";
 import RightSection from "./RightSection";
@@ -7,9 +6,9 @@ import BottomSection from "./BottomSection";
 
 const HeroSection = () => {
   return (
-    <header className="min-h-screen pt-36 background-style">
+    <header className=" pt-36 background-style">
       <Container>
-        <div className="hero-section-divide">
+        <div className="hero-section-divider">
           <LeftSection />
           <RightSection />
           <BottomSection />

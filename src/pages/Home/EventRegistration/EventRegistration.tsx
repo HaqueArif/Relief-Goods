@@ -8,7 +8,9 @@ const EventRegistration = () => {
     <div className=" py-40  ">
       <Container>
         <div className="e-Reg-Divider">
+          {/* left section || Heading and details */}
           <RegistrationDetails />
+          {/* right section || form */}
           <RegistrationForm />
         </div>
       </Container>

@@ -4,7 +4,7 @@ import { ArrowRight, CheckIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeInBounce } from "@/Animation/useAnimation";
 
-const PremiumPlan = (props: TImageProps): JSX.Element => {
+const PremiumPlan = (props: TImageProps) => {
   return (
     <motion.div
       variants={fadeInBounce}

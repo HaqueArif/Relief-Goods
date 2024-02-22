@@ -1,17 +1,7 @@
-import React, { FormEvent } from "react";
+import { EventFormProps } from "../Types";
 import { Button } from "../ui/button";
 
-type EventFormProps = {
-  onSubmit: (event: FormEvent<HTMLFormElement>) => void;
-  onInputChange: React.ChangeEventHandler<HTMLInputElement>;
-  label: string;
-};
-
-const EventForm: React.FC<EventFormProps> = ({
-  onSubmit,
-  onInputChange,
-  label,
-}) => {
+const EventForm = ({ onSubmit, onInputChange, label }: EventFormProps) => {
   return (
     <form className="flex flex-col gap-2" onSubmit={onSubmit}>
       <label>{label}</label>

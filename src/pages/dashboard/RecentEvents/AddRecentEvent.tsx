@@ -18,6 +18,7 @@ const AddRecentEvent = () => {
 
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     handleSubmit(eventItem);
     setEventItem("");
   };
