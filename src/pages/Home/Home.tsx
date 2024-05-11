@@ -1,27 +1,21 @@
-import EventItemsSection from "./EventSection/EventItemsSection";
-import EventLifecycle from "./EventLifecycle/EventLifecycle";
-import EventRegistration from "./EventRegistration/EventRegistration";
-import GallerySection from "./Gallery/GallerySection";
-import HeroSection from "./HeroSection/HeroSection";
-import OurClient from "./OurClient/OurClient";
-import OurServices from "./OurServiceSection/OurServices";
-import PricingPlanSection from "./PricingPlan/PricingPlanSection";
-import RecentEvents from "./RecentEvents/RecentEvents";
-import Testimonial from "./Testimonial/Testimonial";
+import GallerySection from "./GallerySection";
+import HeroSection from "./HeroSection";
+import OurWork from "./OurWork";
+import GiftCard from "./GiftCard";
+import Testimonial from "./Testimonial";
+import OurCorporatePartners from "./OurCorporatePartners";
+import AboutUs from "./AboutUs";
 
 const Home = () => {
   return (
     <div className="overflow-x-hidden">
       <HeroSection />
-      <OurClient />
-      <OurServices />
-      <EventItemsSection />
-      <PricingPlanSection />
+      <OurCorporatePartners />
+      <OurWork />
       <GallerySection />
+      <GiftCard />
+      <AboutUs />
       <Testimonial />
-      <RecentEvents />
-      <EventLifecycle />
-      <EventRegistration />
     </div>
   );
 };

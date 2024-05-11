@@ -70,7 +70,7 @@
 }
 
 .slider-hover:hover {
-  @apply bg-primary text-white  rounded-full;
+  @apply bg-[#0094DA] text-white  rounded-full;
 }
 
 .mySwiper {
@@ -94,6 +94,52 @@
     rgba(0, 0, 0, 0.05) 93.85%
   );
   backdrop-filter: blur(2px);
+}
+
+.btn-primary-hover {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.4s;
+  text-transform: uppercase;
+  border: 1px solid #085492;
+}
+.btn-primary-hover:hover {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  overflow: hidden;
+  color: #085492;
+  font-weight: bold;
+}
+.btn-primary-hover::after {
+  background: #ffde00;
+  content: " ";
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -18px;
+  transform: skewX(-35deg);
+  z-index: -1;
+  transition: 0.4s ease-in-out;
+}
+.btn-primary-hover:hover::after {
+  width: 120%;
+}
+
+.about-heading {
+  position: relative;
+}
+.about-heading::after {
+  background: #2d3845;
+  content: " ";
+  width: 110px;
+  height: 1px;
+  position: absolute;
+  top: 150%;
+  left: 0;
 }
 
 @layer base {
@@ -177,6 +223,6 @@
   }
 
   h1 {
-    @apply text-[42px] lg:text-[56px] xl:text-[64px] font-extrabold leading-[110%];
+    @apply text-[36px] lg:text-[46px]  font-extrabold leading-[110%];
   }
 }

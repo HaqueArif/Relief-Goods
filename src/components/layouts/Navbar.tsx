@@ -1,8 +1,13 @@
 import { NavLink } from "react-router-dom";
 import Container from "../Container";
+import "@/styles/Nav.css";
 import { useState } from "react";
 import { MobileNavRoutes, WebNavRoutes } from "./NavRoutes";
 import { Menu, X } from "lucide-react";
+import { motion } from "framer-motion";
+import { fadeInTop } from "@/Animation/useAnimation";
+import { useAppDispatch, useAppSelector } from "@/redux/fetures/hooks";
+import { logout, selectCurrentUser } from "@/redux/fetures/auth/authSlice";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -10,19 +15,29 @@ const Navbar = () => {
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
+  const user = useAppSelector(selectCurrentUser);
+  const dispatch = useAppDispatch();
+  const handleLogout = () => {
+    dispatch(logout());
+  };
 
   return (
-    <header className="h-fit fixed py-6  w-full z-[999]">
+    <motion.header
+      variants={fadeInTop}
+      initial="initial"
+      whileInView="whileInView"
+      viewport={{ once: true }}
+      className="h-fit fixed py-6  w-full z-[999]"
+    >
       <Container>
-        <nav className="w-full h-full backdrop-blur-sm max-w-[1240px] flex justify-between items-center ">
+        <nav className="nav-styles">
           {/* logo section */}
-          <NavLink to="/" className="space-x-2 text-[24px] sm:text-[32px]">
-            <span className=" font-bold dark-gray">Event</span>
-            <span className=" font-[900] text-primary">360</span>
+          <NavLink to="/" className="w-40 md:w-52">
+            <img src="https://i.postimg.cc/8cK5TPzF/logo-1.png" alt="" />
           </NavLink>
           {/* web routes */}
           <div className="hidden sm:block">
-            <WebNavRoutes />
+            <WebNavRoutes handleLogout={handleLogout} user={user} />
           </div>
 
           {/* Mobile Menu */}
@@ -44,12 +59,12 @@ const Navbar = () => {
         </nav>
         {/* web routes */}
         {mobileMenuOpen && (
-          <div className="sm:hidden flex justify-end">
-            <MobileNavRoutes />
+          <div className="sm:hidden flex justify-end ">
+            <MobileNavRoutes handleLogout={handleLogout} user={user} />
           </div>
         )}
       </Container>
-    </header>
+    </motion.header>
   );
 };
 

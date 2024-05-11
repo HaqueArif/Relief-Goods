@@ -1,9 +1,7 @@
 .gallery-measurement {
   @apply mt-[188px] mb-[38px];
 }
-.gallery-section-divider {
-  @apply grid md:grid-cols-2 gap-[120px] place-items-center;
-}
+
 .gallery-details-p {
   @apply my-8;
 }

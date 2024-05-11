@@ -3,53 +3,53 @@ import client2 from "@/assets/Client/Ellipse 80 (1).svg";
 import client3 from "@/assets/Client/Ellipse 80 (2).svg";
 import { TestimonialItem } from "@/components/Types";
 
-export const testimonials: TestimonialItem[] = [
+export const reliefGoodsTestimonials: TestimonialItem[] = [
   {
     id: 1,
-    userName: "Amelia Joseph",
-    title: "Chief Manager",
+    userName: "Emily Johnson",
+    title: "Provider Coordinator",
     testimonial:
-      "My vision came alive effortlessly. Their blend of casual and professional approach made the process a breeze. Creativity flowed, and the results were beyond my expectations.",
+      "I'm amazed by the dedication of the relief goods team. We work tirelessly to ensure that essential supplies reach those in need, even in the most challenging conditions.",
     image: client1,
   },
   {
     id: 2,
-    userName: "Jacob Joshua",
-    title: "Chief Manager",
+    userName: "David Thompson",
+    title: "Beneficiary",
     testimonial:
-      "I found the digital expertise I needed. Their creative-professional balance exceeded expectations. Friendly interactions, exceptional outcomes. For digital enchantment, it's got to be Embrace!",
+      "The relief goods provided by this organization made a huge difference for me and my family during a difficult time. We're grateful for their support and generosity.",
     image: client2,
   },
   {
     id: 3,
-    userName: "Amelia Joseph2",
-    title: "Chief Manager",
+    userName: "Sarah Parker",
+    title: "Donor",
     testimonial:
-      "Embrace really nails it! Creative brilliance, approachable style. They're the partners you want—artistry meets strategy. Thrilled with what they achieved!",
+      "I've been supporting this relief goods initiative for years, and I continue to be impressed by the impact we make. It's heartwarming to see how my contributions are helping those in need.",
     image: client3,
   },
   {
     id: 4,
-    userName: "Amelia Joseph",
-    title: "Chief Manager",
+    userName: "Michael Chen",
+    title: "Logistics Coordinator",
     testimonial:
-      "My vision came alive effortlessly. Their blend of casual and professional approach made the process a breeze. Creativity flowed, and the results were beyond my expectations.",
+      "Coordinating the distribution of relief goods is no easy task, but with the dedication and teamwork of our staff and volunteers, we're able to reach communities in need efficiently and effectively.",
     image: client1,
   },
   {
     id: 5,
-    userName: "Jacob Joshua",
-    title: "Chief Manager",
+    userName: "Sophia Davis",
+    title: "Community Leader",
     testimonial:
-      "I found the digital expertise I needed. Their creative-professional balance exceeded expectations. Friendly interactions, exceptional outcomes. For digital enchantment, it's got to be Embrace!",
+      "The relief goods provided by this organization have strengthened our community during challenging times. They not only provide essential supplies but also hope and support to those who need it most.",
     image: client2,
   },
   {
     id: 6,
-    userName: "Amelia Joseph",
-    title: "Chief Manager",
+    userName: "John Smith",
+    title: "Local Resident",
     testimonial:
-      "Embrace really nails it! Creative brilliance, approachable style. They're the partners you want—artistry meets strategy. Thrilled with what they achieved!",
+      "I've seen firsthand the impact of the relief goods distributed by this organization. They've helped our community recover from disasters and provided assistance to those facing hardships. Their work is invaluable.",
     image: client3,
   },
 ];

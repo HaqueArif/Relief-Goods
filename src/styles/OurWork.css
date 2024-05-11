@@ -1,0 +1,45 @@
+.service-section {
+  @apply my-[250px];
+}
+
+.header-section h1 {
+  @apply text-center;
+}
+.header-details {
+  @apply mt-3 mb-[54px] max-w-2xl mx-auto text-center;
+}
+.service-divider {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-20;
+}
+
+/* service card */
+
+.service-card-style {
+  @apply px-[25px] pt-[25px] pb-[30px] rounded-[6px]  glass-gradient-service;
+}
+.service-card-style img {
+  @apply w-full rounded-md;
+}
+.service-card-style h3 {
+  @apply text-lg xl:text-xl font-extrabold leading-[110%] mt-6 mb-3;
+}
+.service-card-style p {
+  @apply text-start text-[#566B84] mb-2;
+}
+.service-card-style span {
+  @apply text-[#566B84] font-bold mr-1 mb-2;
+}
+
+/* .service-card-style Button {
+  @apply w-full py-4  bottom-[-50%];
+} */
+
+.glass-gradient-service {
+  border-radius: 6px;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.05) 93.85%,
+    rgba(0, 0, 0, 0.05) 93.85%
+  );
+  backdrop-filter: blur(2px);
+}

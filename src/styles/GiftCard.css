@@ -1,0 +1,59 @@
+.border-style {
+  position: relative;
+}
+.border-style::before {
+  content: "";
+  width: 50px;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.btn-hover {
+  @apply w-fit px-10 py-3 mx-auto bg-[#4f5f71] text-white;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  overflow: hidden;
+}
+.btn-hover::after {
+  background: #2d3845;
+  content: " ";
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -18px;
+  transform: skewX(-35deg);
+  z-index: -1;
+  transition: 0.4s ease-in-out;
+}
+
+.btn-redeem:hover::after {
+  width: 120%;
+}
+
+.btn-redeem {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  overflow: hidden;
+}
+.btn-redeem::after {
+  background: #f5f5f575;
+  content: " ";
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -18px;
+  transform: skewX(-35deg);
+  z-index: -1;
+  transition: 0.4s ease-in-out;
+}
+
+.btn-hover:hover::after {
+  width: 120%;
+}

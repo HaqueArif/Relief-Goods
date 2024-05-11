@@ -1,18 +1,26 @@
 import { FormEvent } from "react";
 
 // ourService section
+export type Detail = {
+  description: string;
+  distribution: string;
+  donation: string;
+};
 export type ServiceData = {
   image: string;
   title: string;
+  category: string;
+  amount: string;
   description: string;
-  features: string[];
 };
 
 export type ServiceCardProps = {
+  _id: string;
   image: string;
   title: string;
+  category: string;
+  amount: string;
   description: string;
-  features: string[];
 };
 
 export type TEventItem = {
@@ -62,7 +70,7 @@ export type TestimonialItem = {
 };
 
 export type IdProps = {
-  itemId: string | null;
+  id: string;
 };
 export type EventItemType = {
   item: {
@@ -87,7 +95,11 @@ export type NavlinkProps = {
 
 export type EventProps = {
   _id: string;
-  item: string;
+  image: string;
+  title: string;
+  category: string;
+  amount: string;
+  details: Detail[];
 };
 
 // form

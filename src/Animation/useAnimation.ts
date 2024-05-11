@@ -14,6 +14,14 @@ export const fadeInLeft = {
     transition: { duration: 3, type: "spring", bounce: 0.5 },
   },
 };
+export const fadeInTop = {
+  initial: { opacity: 0, y: -100 },
+  whileInView: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, delay: 1, type: "spring", stiffness: 100 },
+  },
+};
 export const fadeInBottom = {
   initial: { opacity: 0, y: 200 },
   whileInView: {

@@ -4,19 +4,19 @@ import "@/styles/Dashboard.css";
 import SidebarComponent from "./SidebarComponent";
 
 const DashboardLayout = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
 
   return (
-    <div className="dashboard-layout background-style">
+    <div className="dashboard-layout background-style min-h-screen">
       <SidebarComponent
         sidebarOpen={sidebarOpen}
         toggleSidebar={toggleSidebar}
       />
-      <div className="overflow-x-auto ps-2 sm:ps-0">
+      <div className="overflow-x-auto ps-2 sm:ps-0 w-full">
         <Outlet />
       </div>
     </div>
