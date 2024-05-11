@@ -76,20 +76,23 @@ const Comments = () => {
           </Form>
         </div>
         <div className="h-[500px] overflow-y-auto">
-          {data?.map((comment, i) => (
-            <ul key={i} className="bg-slate-200 p-3 rounded-xl my-1">
-              <li className=" text-gray-800 flex gap-3">
-                <MessageCircle className="text-blue-400" />{" "}
-                {comment?.data?.details}
-              </li>
-              <li className="text-sm text-gray-500">
-                Email: {comment?.data?.email}
-              </li>
-              <li className="text-sm text-gray-500">
-                Date: {comment?.currentDate}
-              </li>
-            </ul>
-          ))}
+          {data
+            ?.slice()
+            .reverse()
+            .map((comment, i) => (
+              <ul key={i} className="bg-slate-200 p-3 rounded-xl my-1">
+                <li className=" text-gray-800 flex gap-3">
+                  <MessageCircle className="text-blue-400" />{" "}
+                  {comment?.data?.details}
+                </li>
+                <li className="text-sm text-gray-500">
+                  Email: {comment?.data?.email}
+                </li>
+                <li className="text-sm text-gray-500">
+                  Date: {comment?.currentDate}
+                </li>
+              </ul>
+            ))}
         </div>
       </div>
     </div>
